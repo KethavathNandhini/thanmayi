@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form</title>
+</head>
+<body>
+    <h1>Welcome to the Selenium Test</h1>
+    <form id="testForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <script>
+        // Just an example of alert on form submission
+        document.getElementById("testForm").onsubmit = function(e) {
+            e.preventDefault(); // Prevent form submission
+            alert("Form submitted with username: " + document.getElementById("username").value);
+        };
+    </script>
+</body>
+</html>
